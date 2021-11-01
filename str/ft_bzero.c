@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   memmove.c                                          :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iidkhebb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/01 14:25:57 by iidkhebb          #+#    #+#             */
-/*   Updated: 2021/11/01 14:45:37 by iidkhebb         ###   ########.fr       */
+/*   Created: 2021/11/01 19:32:22 by iidkhebb          #+#    #+#             */
+/*   Updated: 2021/11/01 19:32:24 by iidkhebb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
-void *ft_memmove(void *str1, const void *str2, size_t n)
+#include<stdio.h>
+#include "libft.h"
+void ft_bzero(void *s, size_t n)
 {
     size_t i;
+    unsigned char *ptr_s = s;
     i = 0;
-    char *ptr_dst = str1;
-    const char *ptr_src = str2;
 
-    if (ptr_dst < ptr_src)
-    {
-        while (n--)
-            *ptr_dst++ = *ptr_src++;
-    }
-    else
-    {
-        
-    }
+    ft_memset(ptr_s, 0, n);
+}
+int main ()
+{
+    size_t i = 0;
+    char data[] = "hello";
+    ft_bzero(data, sizeof(data));
+    if(data[i] == '\0')
+        printf("%s", "hekll");
 }

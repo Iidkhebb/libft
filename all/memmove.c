@@ -24,6 +24,10 @@ void *ft_memmove(void *str1, const void *str2, size_t n)
     }
     else
     {
-        
+        char *ptr_src2 = ptr_src + (n - 1);
+        char *ptr_dest2 =  ptr_dst + (n - 1);
+        while(n--)
+            *ptr_dest2 = *ptr_src2;
     }
+    return(str1);
 }
