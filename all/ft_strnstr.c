@@ -26,6 +26,6 @@ int main ()
     const char *largestring = "hello abcdefgh is my code";
     const char *smallstring = "";
 
-    printf("%s", ft_strnstr(largestring, smallstring, 3));
+    printf("%s", ft_strnstr(largestring, msallstring, 3));
 }
 */
