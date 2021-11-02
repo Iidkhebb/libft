@@ -1,3 +1,4 @@
+#include "libft.h"
 int ft_isgraph(int a)
 {
 	if (a >= 33 && a <= 126)

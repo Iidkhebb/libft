@@ -9,7 +9,7 @@
 /*   Updated: 2021/11/01 14:45:37 by iidkhebb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
+#include "libft.h"
 void *ft_memmove(void *str1, const void *str2, size_t n)
 {
     size_t i;
@@ -24,10 +24,10 @@ void *ft_memmove(void *str1, const void *str2, size_t n)
     }
     else
     {
-        char *ptr_src2 = ptr_src + (n - 1);
+        const char *ptr_src2 = ptr_src + (n - 1);
         char *ptr_dest2 =  ptr_dst + (n - 1);
         while(n--)
-            *ptr_dest2 = *ptr_src2;
+            *ptr_dest2-- = *ptr_src2--;
     }
     return(str1);
 }

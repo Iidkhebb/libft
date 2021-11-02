@@ -1,3 +1,4 @@
+#include "libft.h"
 int ft_isblank(int a)
 {
 	if (a == 8 || a == 9)
