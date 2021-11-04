@@ -1,7 +1,7 @@
 #include "libft.h"
 char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-    int i;
+    size_t i;
     char *str;
     
     if (!(s) || !(f))
