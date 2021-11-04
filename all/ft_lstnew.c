@@ -29,7 +29,7 @@ int main ()
 
 	void *scr = "hello";
 	int i = 0;
-	while(i < 25)
+	while(i < 6)
 	{
 		tmp = ft_lstnew(scr);
 		tmp->next = head;
