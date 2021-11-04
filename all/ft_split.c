@@ -14,10 +14,11 @@ static int number_of_str(char const *str,char c)
     }
     return (j);
 }
-static char *mallocator(int k)
+static char *mallocator(int k, char const *str)
 {
     char *tab;
     tab = (char *)malloc((k + 1) * sizeof(char));
+    ft_memcpy(tab, str,k);
     if(!(tab))
         return (0);
     return(tab);    
@@ -37,8 +38,7 @@ static char **word_maker(char **tab,char const *str, int size, char c)
             k++;
         if(k != 0)
         {
-            tab[l] = mallocator(k);
-            ft_memcpy(tab[l],str,k);
+            tab[l] = mallocator(k, str);
             tab[l++][k] = '\0';
             str += i;
             k = 0;
@@ -49,7 +49,7 @@ static char **word_maker(char **tab,char const *str, int size, char c)
             str += i; 
             i = 0;
     }
-    tab[l]= '\0';
+    tab[l] = NULL;
     return (tab);
 }
 char **ft_split(char const *s, char c)
@@ -58,7 +58,7 @@ char **ft_split(char const *s, char c)
     char **hub;
 
     j = number_of_str(s,c);  
-    hub = (char **)malloc((j + 1) * sizeof(char*));
+    hub = (char **)malloc((j) * sizeof(char*));
     if(!(hub))
         return (0);
     word_maker(hub,s,j,c);
@@ -67,11 +67,10 @@ char **ft_split(char const *s, char c)
 
 int main()
 {
-    char x[] = "hello  world";
+    char x[] = "hello                worldhello  worldhello  worldhello  worldhello  worldhello  worldhello  worldhello  worldhello  worldhello  worldhello  worldhello                   worldhello  worldhello  worldhello  worldhello  worldhello  worldhello  worldhello  worldhello  worldhello  worldhello  worldhello                                            worldhello                                        worldhello  worldhello  worldhello  worldhello  worldhello  worldhello  worldhello  worldhello  worldhello  worldhello  worldhello  worldhello  worldhello  worldhello  worldhello  world";
     char c = ' ';
     char **tab = ft_split(x,c);
-    for(int i =0; i < 2 ;i++)
-    {
-        printf("%s\n",tab[i]);
-    }
+    int i = 0;
+    while (tab[i] != NULL)
+        printf("%s\n", tab[i++]);
 }
