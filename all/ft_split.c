@@ -57,21 +57,20 @@ char **ft_split(char const *s, char c)
     char **hub;
 
     j = number_of_str(s,c);  
-    hub = (char **)malloc((j + 1) * sizeof(char*));
+    hub = (char **)malloc((j) * sizeof(char*));
     if(!(hub))
         return (0);
     word_maker(hub,s,j,c);
     return (hub);
 }
-/*
+
 int main()
 {
-    char x[] = "helloiiiiiworldiiiihlll";
-    char c = 'i';
+    char x[] = "hello  world";
+    char c = ' ';
     char **tab = ft_split(x,c);
-    for(int i =0; i < 3 ;i++)
+    for(int i =0; i < 2 ;i++)
     {
         printf("%s\n",tab[i]);
     }
 }
-*/
