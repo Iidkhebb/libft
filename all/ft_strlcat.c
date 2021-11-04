@@ -1,9 +1,9 @@
 #include "libft.h"
 size_t ft_strlcat(char *dst, const char *src, size_t size)
 {
-	unsigned int	i;
-	unsigned int	s_dest;
-	unsigned int	s_src;
+	size_t	i;
+	size_t	s_dest;
+	size_t	s_src;
 
 	s_dest = ft_strlen(dst);
 	s_src = ft_strlen(src);

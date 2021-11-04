@@ -12,9 +12,9 @@ int ft_atoi(const char *str)
 	{
 		i++;
 	}
-	while (str[i] == 43 || str[i] == 45)
+	if (str[i] == 43 || str[i] == 45)
 	{
-		if (str[i] == 45 )
+		if (str[i] == 45)
 		{
 			sign = -sign;
 		}
