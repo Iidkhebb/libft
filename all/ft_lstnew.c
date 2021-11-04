@@ -1,5 +1,5 @@
 #include "libft.h"
-
+/*
 void printlist(t_list *head)
 {
 	t_list *tmp = head;
@@ -9,7 +9,7 @@ void printlist(t_list *head)
 		tmp = tmp->next;
 	}
 }
-
+*/
 t_list *ft_lstnew(void *content)
 {
 	t_list *new;
@@ -22,8 +22,7 @@ t_list *ft_lstnew(void *content)
 	return (new);
 }
 
-
-
+/*
 int main ()
 {
 	t_list *head = NULL;
@@ -40,3 +39,4 @@ int main ()
 	}
 	printlist(head);
 }
+*/

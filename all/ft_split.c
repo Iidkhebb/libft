@@ -49,6 +49,7 @@ static char **word_maker(char **tab,char const *str, int size, char c)
             str += i; 
             i = 0;
     }
+    tab[l]= '\0';
     return (tab);
 }
 char **ft_split(char const *s, char c)
@@ -57,7 +58,7 @@ char **ft_split(char const *s, char c)
     char **hub;
 
     j = number_of_str(s,c);  
-    hub = (char **)malloc((j) * sizeof(char*));
+    hub = (char **)malloc((j + 1) * sizeof(char*));
     if(!(hub))
         return (0);
     word_maker(hub,s,j,c);
