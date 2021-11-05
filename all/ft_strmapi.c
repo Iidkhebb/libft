@@ -2,18 +2,16 @@
 char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
     size_t i;
-    char *str;
+    char *str;    
     
-    if (!(s) || !(f))
+    str = ft_strdup(s);
+    if (!(s) || !(f) || !(str))
         return(0);
     i = 0;
-    str = ft_strdup(s);
-
-    while (str)
+    while (str[i])
     {
-        str[i] = f(i, s[i]);
+        str[i] = f(i, str[i]);
         i++;
     }
-    str[i] = '\0';
     return(str);
 }
