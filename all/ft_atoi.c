@@ -9,15 +9,11 @@ int ft_atoi(const char *str)
 	sign = 1;
 	r = 0;
 	while ((str[i] >= 9 && str[i] <= 13) || (str[i] == 32))
-	{
 		i++;
-	}
 	if (str[i] == 43 || str[i] == 45)
 	{
 		if (str[i] == 45)
-		{
 			sign = -sign;
-		}
 		i++;
 	}
 	while (str[i] >= 48 && str[i] <= 57)
@@ -27,3 +23,14 @@ int ft_atoi(const char *str)
 	}
 	return (r * sign);
 }
+/*
+int main ()
+{
+	char n[] = "-999999999999999999";
+	int i1 = atoi(n);
+	int i2 = ft_atoi(n);
+
+	printf("%d\n",i1);
+	printf("%d",i2);
+}
+*/

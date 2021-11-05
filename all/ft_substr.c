@@ -1,14 +1,14 @@
 #include "libft.h"
 char *ft_substr(char const *s, unsigned int start, size_t len)
 {
-    int	i;
+    size_t	i;
     char *str;
 
 	i = 0;
     str = (char *)malloc(len + 1);
-	if (!(s) || !(str))
+	if (!(s) || !(str) || (start >= len))
         return(0);
-    while (len != 0 && i < ft_strlen(s))
+    while (len != 0 && i <= ft_strlen(s))
     {
         str[i] = ((char *)s)[start];
         start++;

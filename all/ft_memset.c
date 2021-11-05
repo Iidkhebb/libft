@@ -10,23 +10,24 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
+
 void *ft_memset(void *str, int c, size_t n)
 {
 	size_t i;
-	unsigned char *ptr = str;
 	i = 0;
-	while(ptr != '\0' && i < n)
+	
+	while(i < n)
 	{
-		ptr[i] = (unsigned char)c;
+		((unsigned char *)str)[i] = c;
 		i++;
 	}
-	return(ptr);
+	return(str);
 
 }
 /*
 int main ()
 {
-	char str[] = "heloo this nmy code";
-	printf("%s", ft_memset(str, 64, 5));
+	char str[] = "bbbbgh";
+	printf("%s", ft_memset(str, 'a', 2));
 }
 */

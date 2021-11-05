@@ -1,31 +1,34 @@
 #include "libft.h"
-char *  ft_strnstr(const char *s1, const char *s2, size_t n)
-{
-	int	i;
 
+char	*ft_strnstr(const char *str, const char *to_find, size_t n)
+{
+	size_t	i;
+	size_t	j;
+
+	if (!(*to_find))
+		return ((char *)str);
 	i = 0;
-	if (s2[i] == '\0')
-		return ((char *)s1);
-	while (s1[i] != '\0')
+	while (str[i] != '\0' && i < n)
 	{
-		while (s2[i] != '\0' && s1[i] == s2[i])
+		if (str[i] == to_find[0])
 		{
-			i++;
-			if (s2[i] == '\0' || i == n)
-				
-				return ((char *)s1);
+			j = 0;
+			while (str[i + j] == to_find[j] && i + j < n)
+				if (to_find[j++ + 1] == '\0')
+					return ((char *)(str + i));
 		}
-		s1++;
-		i = 0;
+		i++;
 	}
 	return (0);
 }
+
 /*
 int main ()
 {
-    const char *largestring = "hello abcdefgh is my code";
-    const char *smallstring = "";
+    const char *largestring = "123456789";
+    const char *smallstring = "2";
 
-    printf("%s", ft_strnstr(largestring, msallstring, 3));
+    printf("ft_strnstr : %s\n", ft_strnstr(largestring, smallstring, 9));
+	printf("strnstr : %s", strnstr(largestring, smallstring, 9));
 }
 */

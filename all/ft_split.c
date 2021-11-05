@@ -1,4 +1,6 @@
 #include "libft.h"
+
+/*
 static int number_of_str(char const *str,char c)
 {
     int i;
@@ -64,7 +66,8 @@ char **ft_split(char const *s, char c)
     word_maker(hub,s,j,c);
     return (hub);
 }
-
+*/
+/*
 int main()
 {
     char x[] = "helllo world";
@@ -74,3 +77,4 @@ int main()
     while (tab[i] != NULL)
         printf("%s\n", tab[i++]);
 }
+*/

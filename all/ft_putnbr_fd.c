@@ -8,12 +8,12 @@ static void	ft_putnbr(int nb, int fd)
 {	
 	if (nb < -2147483647)
 	{
-		write(1, "-2147483648", 11);
+		write(fd, "-2147483648", 11);
 	}
 	if (nb < 0 && nb > -2147483648)
 	{
 		nb = -nb;
-		data('-', fd);
+		//data('-', fd);
 	}
 	if (nb < 10 && nb >= 0 )
 	{
