@@ -67,7 +67,7 @@ char **ft_split(char const *s, char c)
 
 int main()
 {
-    char x[] = "hello                worldhello  worldhello  worldhello  worldhello  worldhello  worldhello  worldhello  worldhello  worldhello  worldhello  worldhello                   worldhello  worldhello  worldhello  worldhello  worldhello  worldhello  worldhello  worldhello  worldhello  worldhello  worldhello                                            worldhello                                        worldhello  worldhello  worldhello  worldhello  worldhello  worldhello  worldhello  worldhello  worldhello  worldhello  worldhello  worldhello  worldhello  worldhello  worldhello  world";
+    char x[] = "helllo world";
     char c = ' ';
     char **tab = ft_split(x,c);
     int i = 0;
