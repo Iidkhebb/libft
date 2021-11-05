@@ -1,9 +1,8 @@
 #include "libft.h"
 t_list *ft_lstlast(t_list *lst)
 {
-    int i;
-    i = 0;
-
+    if (!lst)
+		return (0);
 	while(lst->next != NULL)
 	{
 		lst = lst->next;
