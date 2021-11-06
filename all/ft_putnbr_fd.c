@@ -13,7 +13,7 @@ static void	ft_putnbr(int nb, int fd)
 	if (nb < 0 && nb > -2147483648)
 	{
 		nb = -nb;
-		//data('-', fd);
+		data('-', fd);
 	}
 	if (nb < 10 && nb >= 0 )
 	{

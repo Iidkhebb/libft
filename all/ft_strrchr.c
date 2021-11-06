@@ -1,22 +1,22 @@
 #include "libft.h"
-/*
+
 char *ft_strrchr(const char *str, int c)
 {
 	const char *save;
-	size_t i;
-	i = ft_strlen(str);
+
 	save = str;
-	str = str + i;
-	while(str[i] != *save && str[i] != c)
+	str = (str + ft_strlen(str));
+	while(*str != *save && *str != (unsigned char)c)
 	{
-		if (c == str[i])
-			return(((char *)(str + i)));
 		str--;
 	}
+	if ((unsigned char)c == *str)
+		return((char *)(str));
 	return(0);	
 }
 
-*/
+/*
+
 char	*ft_strrchr(const char *s, int c)
 {
 	int			i;
@@ -31,6 +31,7 @@ char	*ft_strrchr(const char *s, int c)
 		return ((char *)s);
 	return (0);
 }
+*/
 /*int main ()
 {
 	const char data[] = "hello.helli.jkkl.gr";

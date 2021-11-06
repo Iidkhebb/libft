@@ -1,67 +1,69 @@
 #include "libft.h"
-static int number_of_str(char const *str,char c)
+static int str_count(char const *str,char c)
 {
     int i;
     int j;
 
     i = 0;
     j = 1;
-    while(str[i] != '\0')
-    {
-        if(str[i + 1] == c && str[i] != c)
+    if(!*str || *str == c)
+        j = 0;
+    while(str[i])
+        if(str[i++] == c && str[i] != c && str[i] != '\0')
             j++;
-        i++;
-    }
     return (j);
 }
-static char *mallocator(int k, char const *str)
+
+static char *mallocator(int i, int size, char **hub, char *str)
 {
     char *tab;
-    tab = (char *)malloc((k + 1) * sizeof(char));
-    ft_memcpy(tab, str,k);
-    if(!(tab))
+    
+    tab = (char *)malloc((i + 1) * sizeof(char));
+    if(tab)
+    {
+        ft_memcpy(tab,str,i);
+        return(tab); 
+    }    
+    else    
+        while (size--)
+            free(hub[size]);
         return (0);
-    return(tab);    
 }
-static char **word_maker(char **tab,char const *str, int size, char c)
+static char **str_writer(char **hub,char *str, char c, int words)
 {
     int i;
-    int k;
     int l;
 
     i = 0;
-    k = 0;
     l = 0;
-    while(size-- != 0)
+    while(*str)
     {
-        while(str[i] != '\0' && str[i++] != c)
-            k++;
-        if(k != 0)
+        while (str[i] && str[i] != c)
+            i++;
+        if(i != 0 && l < words)
         {
-            tab[l] = mallocator(k, str);
-            tab[l++][k] = '\0';
+            hub[l] = mallocator(i, words, hub, str);
+            hub[l++][i] = '\0';
             str += i;
-            k = 0;
             i = 0;
         }
         else
-            size++;
-            str += i; 
-            i = 0;
+            str += 1;     
     }
-    tab[l] = NULL;
-    return (tab);
+    hub[l] = NULL;
+    return(hub);
 }
 char **ft_split(char const *s, char c)
 {
     int j;
     char **hub;
 
-    j = number_of_str(s,c);  
-    hub = (char **)malloc((j+1) * sizeof(char*));
-    if(!(hub))
-        return (0);
-    word_maker(hub,s,j,c);
+    hub = NULL;
+    j = str_count(s,c);  
+    hub = (char **)malloc((j + 1) * sizeof(char*));
+    if(hub == NULL)
+        return (NULL);
+    str_writer(hub,(char *)s,c,j);
     return (hub);
 }
 
