@@ -2,25 +2,17 @@
 
 char *ft_strjoin(char const *s1, char const *s2)
 {
-	size_t		i;
-	char *out;
-    size_t size;
-	char *save;
+    int i;
+    char *s;
 
-	i = 0;
-    size = ft_strlen(s1) + ft_strlen(s2);
-    out = malloc(sizeof(size + 1));
-	if ((!(s1) || !(s2)) || !(out))
-		return (0);
-	save = (char *)s1;	
-	ft_memmove(out , save, ft_strlen(save));
-	while (s2[i] != '\0' && i < size)
-	{
-		out[ft_strlen(s1) + i] = s2[i];
-		i++;
-	}
-	out[size] = '\0';
-	return (out);
+    i = 0;
+    s = (char *)malloc(ft_strlen(s1)+ft_strlen(s2) + 1);
+    if ((!(s1) && !(s2)) || !(s))
+        return (0);
+    ft_memmove(s,s1,ft_strlen(s1));
+    ft_memmove(s + ft_strlen(s1),s2,ft_strlen(s2));
+    s[ft_strlen(s1)+ft_strlen(s2)] = '\0';
+    return (s);
 }
 
 /*

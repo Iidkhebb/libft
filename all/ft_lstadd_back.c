@@ -9,7 +9,7 @@ void ft_lstadd_back(t_list **lst, t_list *new)
 */
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list *aux;
+	t_list *last_node;
 
 	if (!new)
 		return ;
@@ -18,8 +18,8 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 		*lst = new;
 		return ;
 	}
-	aux = ft_lstlast(*lst);
-	aux->next = new;
+	last_node = ft_lstlast(*lst);
+	last_node->next = new;
 }
 /*
 int main ()
