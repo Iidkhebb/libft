@@ -8,17 +8,13 @@ LIBNAME = libft.a
 	
 all :
 	@$(CC) $(W) $(CFILES)
-	@echo "Successfully all"
 clean:
 	@rm -f ${OFILES}
 fclean : clean
 	@rm -f ${LIBNAME}
-	@echo "Successfully fclean"
 lib:
 	ar rc libft.a $(OFILES)
-	@echo "Successfully lib"
 re : fclean all lib
-	@echo "Successfully OK"
 bonus:
 	@$(CC) $(W) $(CBONUS)
 	@ar rc libft.a $(OBONUS)
