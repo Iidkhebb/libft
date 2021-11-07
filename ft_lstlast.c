@@ -1,13 +1,26 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: iidkhebb <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/07 16:31:07 by iidkhebb          #+#    #+#             */
+/*   Updated: 2021/11/07 16:31:54 by iidkhebb         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
-t_list *ft_lstlast(t_list *lst)
+
+t_list	*ft_lstlast(t_list *lst)
 {
-    if (!lst)
+	if (!lst)
 		return (0);
-	while(lst->next != NULL)
+	while (lst->next != NULL)
 	{
 		lst = lst->next;
 	}
-    return(lst);
+	return (lst);
 }
 /*
 int main ()
