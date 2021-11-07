@@ -24,10 +24,12 @@ static char *mallocator(int i, int size, char **hub, char *str)
         ft_memcpy(tab,str,i);
         return(tab); 
     }    
-    else    
+    else
+    {
         while (size--)
             free(hub[size]);
-        return (0);
+      return (0);
+    }
 }
 static char **str_writer(char **hub,char *str, char c, int words)
 {
