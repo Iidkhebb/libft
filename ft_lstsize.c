@@ -1,15 +1,28 @@
-#include "libft.h"
-int ft_lstsize(t_list *lst)
-{
-    int i;
-    i = 0;
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: iidkhebb <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/07 15:22:31 by iidkhebb          #+#    #+#             */
+/*   Updated: 2021/11/07 15:24:09 by iidkhebb         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-	while(lst != NULL)
+#include "libft.h"
+
+int	ft_lstsize(t_list *lst)
+{
+	int	i;
+
+	i = 0;
+	while (lst != NULL)
 	{
 		lst = lst->next;
-        i++;
+		i++;
 	}
-    return(i);
+	return (i);
 }
 /*
 int main ()
