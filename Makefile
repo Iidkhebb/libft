@@ -9,9 +9,6 @@ CC = gcc
 W = -c -Wall -Werror -Wextra
 LIBNAME = libft.a
 
-
-
-
 all :
 	@$(CC) $(W) $(CFILES)
 clean:
