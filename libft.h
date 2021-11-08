@@ -6,7 +6,7 @@
 /*   By: iidkhebb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 17:35:02 by iidkhebb          #+#    #+#             */
-/*   Updated: 2021/11/07 17:43:14 by iidkhebb         ###   ########.fr       */
+/*   Updated: 2021/11/08 20:17:22 by iidkhebb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,8 @@ typedef struct s_list
 }				t_list;
 
 size_t	ft_strlen(const char *str);
-char	*ft_strncpy(char *dest, const char *src, size_t n);
 int		ft_strncmp(const char *str1, const char *str2, size_t n);
-char	*ft_strncat(char *dest, const char *src, size_t n);
 size_t	ft_strlcpy(char *dest, const char *src, size_t size);
-char	*ft_strcpy(char *dest, const char *src);
-char	*ft_strcat(char *dest, const char *src);
 void	ft_bzero(void *s, size_t n);
 char	*ft_strchr(const char *str, int c);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
