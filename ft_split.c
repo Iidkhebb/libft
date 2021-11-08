@@ -83,15 +83,3 @@ char	**ft_split(char const *s, char c)
 	str_writer(hub, (char *)s, c, j);
 	return (hub);
 }
-
-/*
-int main()
-{
-    char x[] = "helllo world";
-    char c = ' ';
-    char **tab = ft_split(x,c);
-    int i = 0;
-    while (tab[i] != NULL)
-        printf("%s\n", tab[i++]);
-}
-*/

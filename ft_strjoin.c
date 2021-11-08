@@ -24,12 +24,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	s[ft_strlen(s1) + ft_strlen(s2)] = '\0';
 	return (s);
 }
-
-/*
-int main ()
-{
-    char s1[] = "hello";
-    char s2[] = "world";
-    printf("%s", ft_strjoin(s1, s2));
-}
-*/

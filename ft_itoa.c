@@ -52,10 +52,3 @@ char	*ft_itoa(int n)
 		str[i] = '0';
 	return (str);
 }
-/*
-int main ()
-{
-    int num = 2147483647;
-    printf("%s", ft_itoa(num));
-}
-*/

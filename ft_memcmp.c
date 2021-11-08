@@ -25,12 +25,3 @@ int	ft_memcmp(const void *str1, const void *str2, size_t n)
 	}
 	return (0);
 }
-/*
-int main ()
-{
-	char str1[] = "\200";
-	char str2[] = "\0";
-
-	printf("%d", ft_memcmp(str1, str2, 4));
-}
-*/

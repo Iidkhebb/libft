@@ -24,14 +24,3 @@ void	*ft_memchr(const void *str, int c, size_t n)
 	}
 	return (0);
 }
-
-/*
-int main()
-{
-    const char str[] = "hello.temm";
-    char *data;
-
-    data = (char *)(ft_memchr(str, 46, 12));
-    printf("%s", data);
-}
-*/

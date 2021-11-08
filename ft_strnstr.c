@@ -33,14 +33,3 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t n)
 	}
 	return (0);
 }
-
-/*
-int main ()
-{
-    const char *largestring = "123456789";
-    const char *smallstring = "2";
-
-    printf("ft_strnstr : %s\n", ft_strnstr(largestring, smallstring, 9));
-	printf("strnstr : %s", strnstr(largestring, smallstring, 9));
-}
-*/

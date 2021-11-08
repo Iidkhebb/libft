@@ -30,10 +30,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	out[i] = '\0';
 	return (out);
 }
-/*
-int main()
-{
-    const char ptr[] = "12";
-    printf("%s", ft_substr(ptr, 1, 15));
-}
-*/

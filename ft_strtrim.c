@@ -27,11 +27,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	out = ft_substr(s1, 0, i);
 	return (out);
 }
-/*
-int main ()
-{
-    char const str[] = "abxyrdahja-ba";
-    char const set[] = "ab";
-    printf("%s", ft_strtrim(str, set));
-}
-*/

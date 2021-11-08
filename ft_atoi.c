@@ -36,14 +36,3 @@ int	ft_atoi(const char *str)
 	}
 	return (r * sign);
 }
-/*
-int main ()
-{
-	char n[] = "-999999999999999999";
-	int i1 = atoi(n);
-	int i2 = ft_atoi(n);
-
-	printf("%d\n",i1);
-	printf("%d",i2);
-}
-*/

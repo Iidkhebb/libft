@@ -19,11 +19,3 @@ void	ft_bzero(void *s, size_t n)
 	ptr_s = s;
 	ft_memset(ptr_s, 0, n);
 }
-/*int main ()
-{
-    size_t i = 0;
-    char data[] = "hello";
-    ft_bzero(data, sizeof(data));
-    if(data[i] == '\0')
-        printf("%s", "hekll");
-}*/

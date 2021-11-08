@@ -43,11 +43,3 @@ void	ft_putnbr_fd(int n, int fd)
 {
 	ft_putnbr(n, fd);
 }
-/*
-int main ()
-{
-    int n = -2147483648;
-    int fd = 1;
-    ft_putnbr_fd(n, fd);
-}
-*/
