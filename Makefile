@@ -13,14 +13,14 @@ INC = libft.h
 NAME = libft.a
 
 ${NAME} : ${OFILES} ${INC}
-	@$(CC) $(W) $(CFILES)
-	@ar -rc $(NAME) $(OFILES)
+	@${CC} ${W} ${CFILES}
+	@ar -rc ${NAME} ${OFILES}
 clean:
 	@rm -f ${OFILES} ${OBONUS}
 fclean : clean
 	@rm -f ${NAME}
 re : fclean all
-all : $(NAME)
+all : ${NAME}
 bonus: ${OBONUS}
-	@$(CC) $(W) $(CBONUS)
-	@ar -rc $(NAME) $(OBONUS)
+	@${CC} ${W} ${CBONUS}
+	@ar -rc ${NAME} ${OBONUS}
